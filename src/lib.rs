@@ -21,7 +21,7 @@ impl<T> Iterator for BiteratorLsb<T>
 {
     type Item = bool; 
 
-    fn next(&mut self) -> Option<bool> {
+    fn next(&mut self) -> Option<Self::Item> {
         if self.at_end { return None; }
 
         let lsb = self.val & T::one();
