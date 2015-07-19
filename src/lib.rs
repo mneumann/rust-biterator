@@ -38,7 +38,7 @@ impl<T> Iterator for BiteratorLsb<T>
     }
 }
 
-fn build_from<T, I>(iter: &mut I, max: usize) -> T 
+pub fn build_from<T, I>(iter: &mut I, max: usize) -> T 
     where I: Iterator<Item=bool>,
           T: Zero + One + BitOr<T, Output=T> + Shl<usize, Output=T>
 {
