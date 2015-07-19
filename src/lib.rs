@@ -11,7 +11,7 @@ pub struct BiteratorLsb<T> {
 impl<T> BiteratorLsb<T>
     where T : Sized+Eq+Shr<usize, Output=T>+Ord+BitAnd<T, Output=T>+Zero+One+Copy
 {
-    fn new(init: T) -> BiteratorLsb<T> {
+    pub fn new(init: T) -> BiteratorLsb<T> {
         BiteratorLsb{val: init, at_end: false}
     }
 }
